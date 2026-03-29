@@ -1,0 +1,32 @@
+# Arduino IDE
+*.o
+*.a
+*.so
+*.so.*
+*.elf
+*.hex
+*.bin
+build/
+dist/
+
+# Dependencies
+lib/
+libraries/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Build artifacts
+*.o
+*.obj
+*.su
+*.gch
+*.elf
+
+# arduino-cli
+.arduino/
