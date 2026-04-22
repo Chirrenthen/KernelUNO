@@ -366,7 +366,7 @@ void executeCommand(char* line) {
           strncpy(fs[j].content, text, CONTENT_LEN - 1);
           fs[j].content[CONTENT_LEN - 1] = '\0';
           Serial.println(F("Saved."));
-          // Jeśli plik jest w /dev/ i nazywa się pinX, steruj pinem
+          // new 22.04.2026
           if (strcmp(fs[j].parentDir, "/dev/") == 0 && strncmp(fs[j].name, "pin", 3) == 0) {
             int devPin = atoi_safe(fs[j].name + 3);
             if (devPin > 0) {
