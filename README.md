@@ -1,3 +1,4 @@
+
 #KernelUNO v1.0 - a Ram filesystem emulator and simple shell for your arduino UNO r3 
 
 #Features
@@ -5,6 +6,9 @@
 - Unix-like Shell with 23 commands
 
 - gpio  without reflashing
+
+<img width="769" height="634" alt="1" src="https://github.com/user-attachments/assets/5d9940bc-8b05-48c4-92f6-c0d2b9dccbed" />
+
 
 #Commands
 
