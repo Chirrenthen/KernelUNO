@@ -2,7 +2,7 @@
 
 # Features
 
-- Unix-like Shell with 23 commands
+- Unix-like Shell with 24 commands
 
 - GPIO support
 
@@ -32,6 +32,7 @@
 - `whoami`
 - `clear`
 - `reboot`
+- `pwm`
 
 # TODO
 
