@@ -1,12 +1,11 @@
-# KernelUNO v1.0 - a Ram filesystem emulator and simple shell for your arduino UNO R3 
+# KernelUNO v1.0
 
-# Features
+A Unix-like shell and RAM filesystem for Arduino UNO R3. Write files, control GPIO pins, read sensors, and run simple scripts all from the serial terminal.
 
-- Unix-like Shell with 24 commands
+<img width="769" height="659" alt="554" src="https://github.com/user-attachments/assets/82aa5f0c-bf22-4f83-865a-ba3b4258011e" />
 
-- GPIO support
 
-<img width="769" height="634" alt="1" src="https://github.com/user-attachments/assets/5d9940bc-8b05-48c4-92f6-c0d2b9dccbed" />
+# Commands:
 
 
 # Commands
@@ -44,16 +43,14 @@
 - `reboot`     # Performs a reset
 ```
 
-# TODO
+## Planned Features
 
-- [ ] eeprom
-- [ ] i2c
-- [ ] pwm (done)
-- [ ] date cmd
-- [ ] alias cmd
-- [ ] 'slots' cmd
+- EEPROM support
+- I2C interface
+- Date cmd
+- neofetch cmd
 
-# LICENSE
+## License
 
-BSD3 ([Arc1011](https://github.com/Arc1011/KernelUNO))
+BSD3 - Original by [Arc1011](https://github.com/Arc1011/KernelUNO)
 
