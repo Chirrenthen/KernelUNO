@@ -29,6 +29,9 @@ A Unix-like shell and RAM filesystem for Arduino UNO R3. Write files, control GP
 - `whoami`
 - `clear`
 - `reboot`
+- `find`
+- `alias`
+- `slots`
 
 ## How It Works
 
