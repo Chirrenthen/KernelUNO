@@ -525,12 +525,40 @@ void executeCommand(char* line) {
     Serial.print(F(" set to ")); Serial.println(pwmVal);
   }
   else if (strcmp_P(cmd, PSTR("help")) == 0) {
-    Serial.println(F("Commands: ls, cd, pwd, mkdir, touch, cat, echo, rm, info"));
+    Serial.println(F("Commands: ls, cd, pwd, mkdir, touch, cat, echo, rm, info, find"));
     Serial.println(F("          pinmode, write, read, gpio, pwm, sh"));
     Serial.println(F("          uptime, uname, dmesg, df, free, whoami, clear, reboot"));
     Serial.println(F("GPIO: gpio [pin] on/off/toggle  |  gpio vixa [count]"));
     Serial.println(F("SH:   sh [file]  -- run script (use ; as line separator)"));
   }
+  else if (strcmp_P(cmd, PSTR("find")) == 0) {
+  if (args[0] == '\0') {
+    Serial.println(F("Usage: find [name]"));
+    return;
+  }
+  int j, found = 0;
+  for (j = 0; j < MAX_FILES; j++) {
+    if (fs[j].active && strcmp(args, fs[j].name) == 0) {
+      // Build full path
+      char fullPath[PATH_LEN + NAME_LEN] = "";
+      strncpy(fullPath, fs[j].parentDir, PATH_LEN - 1);
+      strncat(fullPath, fs[j].name, NAME_LEN - 1);
+      if (fs[j].isDirectory) strncat(fullPath, "/", 2);
+      Serial.println(fullPath);
+      found++;
+    }
+  }
+  if (!found) {
+    Serial.print(F("find: '"));
+    Serial.print(args);
+    Serial.println(F("' not found"));
+  } else {
+    Serial.print(F("("));
+    Serial.print(found);
+    Serial.println(F(" result(s))"));
+  }
+  addDmesg(F("find executed"));
+}
   else {
     Serial.println(F("Unknown command."));
   }
