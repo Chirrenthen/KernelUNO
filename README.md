@@ -48,10 +48,7 @@ Input is buffered from the serial connection and parsed line-by-line. Commands a
 - EEPROM support
 - I2C interface
 - Date cmd
-- Alias cmd
-- `slots` cmd
 - neofetch cmd
-- find cmd
 
 ## License
 
